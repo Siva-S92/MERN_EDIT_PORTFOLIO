@@ -23,6 +23,7 @@ app.use(cors({origin: "*"}))
 databaseConnection();
 
 //Routes
+app.get('/', async (req, res) => res.send("Express on vercel with index.js"))
 app.use("/api/portfolio", portfolioRouter)
 app.use("/api/admin", userRouter)
 
