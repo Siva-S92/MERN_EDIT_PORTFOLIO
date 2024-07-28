@@ -1,1 +1,1 @@
-export const CLIENT_URL = "https://mern-edit-portfolio-frontend.vercel.app/"
+export const CLIENT_URL = "https://mern-edit-portfolio-frontend.vercel.app"
