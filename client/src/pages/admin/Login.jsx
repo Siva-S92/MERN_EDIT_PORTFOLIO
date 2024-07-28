@@ -18,7 +18,7 @@ function Login() {
   const login = async () => {
     try {
       dispatch(showLoading());
-      const response = await axios.post(`/api/admin/login`, user);
+      const response = await axios.post(`https://mern-edit-portfolio-backend.vercel.app/api/admin/login`, user);
       dispatch(hideLoading());
       if (response.data.success) {
         message.success(response.data.message);
