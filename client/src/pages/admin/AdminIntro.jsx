@@ -12,7 +12,7 @@ function AdminIntro() {
   const onfinish = async (values) => {
     try {
         dispatch(showLoading);
-        const response = await axios.post(`/api/portfolio/update-intro`,{
+        const response = await axios.post(`https://mern-edit-portfolio-backend.vercel.app/api/portfolio/update-intro`,{
             ...values,
             _id: portfolioData.intro._id
         });

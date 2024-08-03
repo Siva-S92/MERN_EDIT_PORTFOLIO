@@ -23,12 +23,12 @@ function AdminExperience() {
       dispatch(showLoading());
       let response;
       if (selectedItemForEdit) {
-        response = await axios.post(`/api/portfolio/update-experience`, {
+        response = await axios.post(`https://mern-edit-portfolio-backend.vercel.app/api/portfolio/update-experience`, {
           ...values,
           _id: selectedItemForEdit._id,
         });
       } else {
-        response = await axios.post(`/api/portfolio/add-experience`, values);
+        response = await axios.post(`https://mern-edit-portfolio-backend.vercel.app/api/portfolio/add-experience`, values);
       }
       
       if (response.data.success) {
@@ -48,7 +48,7 @@ function AdminExperience() {
   const handleDelete = async (item) => {
     try {
       dispatch(showLoading());
-      const response = await axios.post(`/api/portfolio/delete-experience`, {
+      const response = await axios.post(`https://mern-edit-portfolio-backend.vercel.app/api/portfolio/delete-experience`, {
         _id: item._id,
       });
       
